@@ -1,7 +1,9 @@
-package com.example.theshoppingmileapp;
+package com.example.theshoppingmileapp.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.theshoppingmileapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
