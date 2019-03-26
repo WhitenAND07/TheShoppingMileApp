@@ -1,16 +1,15 @@
-package com.example.theshoppingmileapp.Activities;
+package com.example.theshoppingmileapp;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.app.Activity;
 
 import com.example.theshoppingmileapp.R;
 
-public class ConfigurationActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_configuration);
+        setContentView(R.layout.activity_main);
     }
-
 }
