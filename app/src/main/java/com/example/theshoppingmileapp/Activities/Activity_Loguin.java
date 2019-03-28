@@ -27,6 +27,7 @@ public class Activity_Loguin  extends AppCompatActivity {
     public static final String PREF_EMAIL = "email";
     public static final String PREF_PASSWD = "passwd";
     public static final String PREF_SKIP_LOGIN = "skip_login";
+    private ProgressDialog progressDialog;
 
     @BindView(R.id.input_email) EditText emailText;
     @BindView(R.id.input_password) EditText passwordText;
@@ -93,7 +94,7 @@ public class Activity_Loguin  extends AppCompatActivity {
             return;
         }
 
-        final ProgressDialog progressDialog = new ProgressDialog(this, R.style.AppTheme_Dark_Dialog);
+        progressDialog = new ProgressDialog(this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
@@ -103,10 +104,10 @@ public class Activity_Loguin  extends AppCompatActivity {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
                         onLoginSuccess();
-                        //onLoginFailed();
-                        progressDialog.dismiss();
+
+
                     }
-                }, 2000);
+                }, 5000);
     }
 
     private void startToMainActivity(){
@@ -142,5 +143,14 @@ public class Activity_Loguin  extends AppCompatActivity {
             passwordText.setError(null);
         }
         return valid;
+    }
+    @Override
+    public void onDestroy (){
+        super.onDestroy();
+
+        if(progressDialog != null)
+            if(progressDialog.isShowing())
+                progressDialog.dismiss();
+        progressDialog= null;
     }
 }

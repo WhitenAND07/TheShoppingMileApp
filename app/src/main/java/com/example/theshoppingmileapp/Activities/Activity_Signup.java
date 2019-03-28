@@ -28,6 +28,7 @@ public class Activity_Signup extends AppCompatActivity {
     public static final String PREF_PASSWD = "passwd";
     private String email, password;
     private SharedPreferences mSharedPreferences;
+    private  ProgressDialog progressDialog;
 
     @BindView(R.id.input_nom) EditText inputEditextNom;
     @BindView(R.id.input_email) EditText inputEditextEmail;
@@ -73,7 +74,7 @@ public class Activity_Signup extends AppCompatActivity {
 
 
 
-            final ProgressDialog progressDialog = new ProgressDialog(Activity_Signup.this,
+            progressDialog = new ProgressDialog(Activity_Signup.this,
                     R.style.AppTheme_Dark_Dialog);
             progressDialog.setIndeterminate(true);
             progressDialog.setMessage("Creating Account...");
@@ -89,7 +90,8 @@ public class Activity_Signup extends AppCompatActivity {
                             // On complete call either onSignupSuccess or onSignupFailed
                             // depending on success
                             onSignupSuccess();
-                            progressDialog.dismiss();
+
+                            //progressDialog.dismiss();
                         }
                     }, 6000);
 
@@ -142,7 +144,15 @@ public class Activity_Signup extends AppCompatActivity {
 
             return valid;
         }
+        @Override
+        public void onDestroy (){
+            super.onDestroy();
 
+            if(progressDialog != null)
+                if(progressDialog.isShowing())
+                    progressDialog.dismiss();
+            progressDialog= null;
+        }
 
 
 }
