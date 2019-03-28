@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Márgenes de pantalla predeterminados, según las pautas de diseño de Android.-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Margenes Imageview location  layout_splash-->
+    <dimen name="margin_layout_location_1">25sp</dimen>
+
+</resources>
