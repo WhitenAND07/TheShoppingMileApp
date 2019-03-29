@@ -19,20 +19,21 @@ import android.content.Context;
 
 public class Activity_Loguin  extends AppCompatActivity {
 
-
     private static final String TAG = "LoginActivity";
-    RelativeLayout rellay1, rellay2;
-    private SharedPreferences mSharedPreferences;
     public static final String PREFERENCE= "preference";
     public static final String PREF_EMAIL = "email";
     public static final String PREF_PASSWD = "passwd";
     public static final String PREF_SKIP_LOGIN = "skip_login";
+    public static  final String EMAILU = Activity_Signup.PREF_Email;
+    public static  final String PASSWLU = Activity_Signup.PREF_PASSWD;
+    private SharedPreferences mSharedPreferences;
     private ProgressDialog progressDialog;
 
     @BindView(R.id.input_email) EditText emailText;
     @BindView(R.id.input_password) EditText passwordText;
     @BindView(R.id.buttonloginNew) Button buttonLoginNew;
     @BindView(R.id.buttnSignupRegisterd) Button buttonSigUp;
+    RelativeLayout rellay1, rellay2;
 
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
@@ -81,19 +82,23 @@ public class Activity_Loguin  extends AppCompatActivity {
             onLoginFailed();
             return;
         }
-
+        String emaliU = mSharedPreferences.getString(EMAILU, "userEmail");
+        String pasUser = mSharedPreferences.getString(PASSWLU, "userPass");
         if(mSharedPreferences.contains(PREF_EMAIL)&& mSharedPreferences.contains(PREF_PASSWD)){
-            SharedPreferences.Editor mEditor = mSharedPreferences.edit();
-            mEditor.putString(PREF_SKIP_LOGIN, "skip");
-            mEditor.apply();
-            startToMainActivity();
-
+            if(loginEmailPassValid(emaliU, pasUser)){
+                SharedPreferences.Editor mEditor = mSharedPreferences.edit();
+                mEditor.putString(PREF_SKIP_LOGIN, "skip");
+                mEditor.apply();
+                startToMainActivity();
+            }else{
+                Toast.makeText(getApplicationContext(), "Username or password invalid!", Toast.LENGTH_SHORT).show();
+                return;
+            }
         }else{
             Toast.makeText(getApplicationContext(),"Unable to Login Plz Register !!",Toast.LENGTH_SHORT).show();
             buttonLoginNew.setEnabled(false);
             return;
         }
-
         progressDialog = new ProgressDialog(this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
@@ -104,8 +109,6 @@ public class Activity_Loguin  extends AppCompatActivity {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
                         onLoginSuccess();
-
-
                     }
                 }, 5000);
     }
@@ -143,6 +146,11 @@ public class Activity_Loguin  extends AppCompatActivity {
             passwordText.setError(null);
         }
         return valid;
+    }
+
+    private boolean loginEmailPassValid (String email, String pass) {
+        return emailText.getText().toString().equals(email) &&
+                passwordText.getText().toString().equals(pass);
     }
     @Override
     public void onDestroy (){
