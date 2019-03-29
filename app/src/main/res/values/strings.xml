@@ -5,5 +5,7 @@
 
     <!--  strings preferencias de usuario  -->
     <string name="pref_titulo_scren_nom_user">Nombre de Usuario</string>
+    <string name="emailUser">Email</string>
+    <string name="passwordUser">Password</string>
     <string name="pref_titulo_scren_password_user">Contraseña de Usuario</string>
 </resources>
