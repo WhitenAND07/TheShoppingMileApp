@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="board1">
+        <item>Todos</item>
+        <item>Electronica</item>
+        <item>Ropa</item>
+        <item>Museo</item>
+        <item>Salon de Belleza</item>
+        <item>Tienda de deporte</item>
+        <item>Libreria</item>
+        <item>Centro Comercial</item>
+        <item>Bolera</item>
+        <item>Autocar</item>
+        <item>Iglesia</item>
+        <item>Ayuntamiento</item>
+        <item>Floristeria</item>
+        <item>Hotel</item>
+        <item>Joyeria</item>
+        <item>Estanco de Tabaco</item>
+        <item>Licoreria</item>
+        <item>Cine</item>
+        <item>Discoteca</item>
+        <item>Teatro</item>
+        <item>Parque</item>
+        <item>Parking</item>
+        <item>Farmacia</item>
+        <item>Zapateria</item>
+        <item>Perfumeria</item>
+    </string-array>
+
+    <string-array name="board2">
+        <item>Todos</item>
+        <item>Electronica</item>
+        <item>Ropa</item>
+        <item>Museo</item>
+        <item>Salon de Belleza</item>
+        <item>Tienda de deporte</item>
+        <item>Libreria</item>
+        <item>Centro Comercial</item>
+        <item>Bolera</item>
+        <item>Autocar</item>
+        <item>Iglesia</item>
+        <item>Ayuntamiento</item>
+        <item>Floristeria</item>
+        <item>Hotel</item>
+        <item>Joyeria</item>
+        <item>Estanco de Tabaco</item>
+        <item>Licoreria</item>
+        <item>Cine</item>
+        <item>Discoteca</item>
+        <item>Teatro</item>
+        <item>Parque</item>
+        <item>Parking</item>
+        <item>Farmacia</item>
+        <item>Zapateria</item>
+        <item>Perfumeria</item>
+    </string-array>
+</resources>
