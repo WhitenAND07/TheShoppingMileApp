@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">The Shopping Mile App</string>
+<<<<<<< HEAD
     <string name="action_settings">Configuracion</string>
     <string name="title_activity_maps">Shopping Mile Map</string>
 
@@ -64,4 +65,12 @@
     <string name="establish_pharmacy">Farmacia</string>
     <string name="establish_Shoes">Zapateria</string>
     <string name="establish_perfumery">Perfumeria</string>
+=======
+    <string name="title_activity_configuration">ConfigurationActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+
+    <!--  strings preferencias de usuario  -->
+    <string name="pref_titulo_scren_nom_user">Nombre de Usuario</string>
+    <string name="pref_titulo_scren_password_user">Contraseña de Usuario</string>
+>>>>>>> implementacion login  y signup hechos
 </resources>
