@@ -3,7 +3,7 @@
     <PreferenceCategory android:title="@string/action_settings">
 
         <EditTextPreference
-            android:id="@+id/username"
+            android:id="@+id/name"
             android:dialogTitle="@string/titleDialog"
             android:inputType="textCapWords"
             android:key="@string/name_key"
