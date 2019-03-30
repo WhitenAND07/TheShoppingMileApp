@@ -164,7 +164,7 @@
             android:layout_height="wrap_content"
             android:background="@color/transparent"
             android:fontFamily="sans-serif"
-            android:text="Ya esrtoy registrado"
+            android:text="Ya estoy registrado"
             android:textAllCaps="true"
             android:textColor="@color/white" />
 
