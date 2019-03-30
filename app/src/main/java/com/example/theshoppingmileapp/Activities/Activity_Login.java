@@ -17,7 +17,7 @@ import android.widget.Toast;
 import android.content.SharedPreferences;
 import android.content.Context;
 
-public class Activity_Loguin  extends AppCompatActivity {
+public class Activity_Login extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
     public static final String PREFERENCE= "preference";
@@ -95,7 +95,7 @@ public class Activity_Loguin  extends AppCompatActivity {
                 return;
             }
         }else{
-            Toast.makeText(getApplicationContext(),"Unable to Login Plz Register !!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Your user not exist.",Toast.LENGTH_SHORT).show();
             buttonLoginNew.setEnabled(false);
             return;
         }
@@ -134,7 +134,7 @@ public class Activity_Loguin  extends AppCompatActivity {
         String password = passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailText.setError("enter a valid email address");
+            emailText.setError("Enter a valid email address");
             valid = false;
         }else {
             emailText.setError(null);

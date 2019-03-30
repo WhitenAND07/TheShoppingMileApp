@@ -53,7 +53,7 @@ public class Activity_Signup extends AppCompatActivity {
         buttonEstoyRegistrado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Activity_Loguin.class));
+                startActivity(new Intent(getApplicationContext(), Activity_Login.class));
 
             }
         });
