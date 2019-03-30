@@ -6,9 +6,9 @@
             android:id="@+id/username"
             android:dialogTitle="@string/titleDialog"
             android:inputType="textCapWords"
-            android:key="@string/username_key"
-            android:summary="@string/usernameSummary"
-            android:title="@string/usernameTitle" />
+            android:key="@string/name_key"
+            android:summary="@string/nameSummary"
+            android:title="@string/nameTitle" />
 
         <EditTextPreference
             android:id="@+id/email_config"

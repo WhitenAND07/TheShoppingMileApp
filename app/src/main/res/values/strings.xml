@@ -10,9 +10,9 @@
     <string name="pref_titulo_scren_password_user">Contraseña de Usuario</string>
 
     <!-- Shared Preferences -->
-    <string name="username_key">username</string>
-    <string name="usernameTitle">Nombre del usuario</string>
-    <string name="usernameSummary">Nombre del usuario</string>
+    <string name="name_key">name</string>
+    <string name="nameTitle">Nombre del usuario</string>
+    <string name="nameSummary">Nombre del usuario</string>
     <string name="titleDialog">Introduce el valor</string>
     <string name="password_key">password</string>
     <string name="passwordTitle">Contraseña</string>
