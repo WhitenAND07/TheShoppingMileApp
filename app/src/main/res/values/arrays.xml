@@ -2,6 +2,7 @@
 <resources>
     <string-array name="board1">
         <item>Todos</item>
+        <item>Gastronomia</item>
         <item>Electronica</item>
         <item>Ropa</item>
         <item>Museo</item>
