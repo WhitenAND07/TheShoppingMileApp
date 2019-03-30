@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/action_settings">
+
+        <EditTextPreference
+            android:id="@+id/username"
+            android:dialogTitle="@string/titleDialog"
+            android:inputType="textCapWords"
+            android:key="@string/username_key"
+            android:summary="@string/usernameSummary"
+            android:title="@string/usernameTitle" />
+
+        <EditTextPreference
+            android:id="@+id/email_config"
+            android:inputType="textEmailAddress"
+            android:dialogTitle="@string/titleDialog"
+            android:key="@string/email_key"
+            android:summary="@string/emailSummary"
+            android:title="@string/emailTitle" />
+
+        <EditTextPreference
+            android:id="@+id/password"
+            android:inputType="textPassword"
+            android:key="@string/password_key"
+            android:title="@string/passwordTitle"
+            android:summary="@string/passwordSummary"
+            android:dialogTitle="@string/titleDialog"/>
+
+        <ListPreference
+            android:id="@+id/board_config"
+            android:defaultValue="Todos"
+            android:dialogTitle="@string/titleDialog"
+            android:entries="@array/board1"
+            android:entryValues="@array/board2"
+            android:key="@string/board_key"
+            android:summary="@string/boardSummary"
+            android:title="@string/boardTitle" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
