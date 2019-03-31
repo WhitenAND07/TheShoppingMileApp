@@ -176,7 +176,7 @@ public class AutoCompleteFragment extends AppCompatActivity {
         FindAutocompletePredictionsRequest.Builder requestBuilder =
                 FindAutocompletePredictionsRequest.builder()
                         .setQuery(getQuery())
-                        .setCountry("Andorra la Vella, Andorra"/*getCountry()*/)
+                        .setCountry(getCountry())
                         .setLocationBias(getLocationBias())
                         .setLocationRestriction(getLocationRestriction())
                         .setTypeFilter(getTypeFilter());
