@@ -15,6 +15,7 @@ import android.content.Context;
 
 
 import com.example.theshoppingmileapp.R;
+import com.example.theshoppingmileapp.dominio.PlacesShopping;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -69,7 +70,7 @@ public class Activity_Signup extends AppCompatActivity {
             mEditor.putString(PREF_Email,email);
             mEditor.putString(PREF_PASSWD,password);
             mEditor.apply();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), PlacesShopping.class));
             finish();
 
 

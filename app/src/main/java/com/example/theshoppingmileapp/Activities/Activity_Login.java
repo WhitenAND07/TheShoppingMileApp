@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import com.example.theshoppingmileapp.R;
+import com.example.theshoppingmileapp.dominio.PlacesShopping;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import android.app.ProgressDialog;
@@ -114,7 +116,7 @@ public class Activity_Login extends AppCompatActivity {
     }
 
     private void startToMainActivity(){
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), PlacesShopping.class));
         finish();
     }
 
