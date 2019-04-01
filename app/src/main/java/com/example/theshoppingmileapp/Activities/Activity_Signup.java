@@ -70,7 +70,7 @@ public class Activity_Signup extends AppCompatActivity {
             mEditor.putString(PREF_Email,email);
             mEditor.putString(PREF_PASSWD,password);
             mEditor.apply();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MapsActivity.class));
             finish();
 
 

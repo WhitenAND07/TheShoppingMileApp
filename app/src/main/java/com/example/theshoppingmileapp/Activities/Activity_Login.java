@@ -116,7 +116,7 @@ public class Activity_Login extends AppCompatActivity {
     }
 
     private void startToMainActivity(){
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), MapsActivity.class));
         finish();
     }
 
