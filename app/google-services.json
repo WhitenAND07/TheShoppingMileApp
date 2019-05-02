@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "921932876541",
+    "firebase_url": "https://static-manifest-235712.firebaseio.com",
+    "project_id": "static-manifest-235712",
+    "storage_bucket": "static-manifest-235712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921932876541:android:7fc4860610c74cbb",
+        "android_client_info": {
+          "package_name": "com.example.theshoppingmileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921932876541-2mrv4ac48ki4sv36igo9hcmhbmfe6o4o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.theshoppingmileapp",
+            "certificate_hash": "804e135935744f5e66e832e4df44a7a24da11b0b"
+          }
+        },
+        {
+          "client_id": "921932876541-h9uaqh0lgb2u9hglql2bb07dalcfsgdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.theshoppingmileapp",
+            "certificate_hash": "69a9237ea058475e367b684775a9d02154a57f50"
+          }
+        },
+        {
+          "client_id": "921932876541-3rqtjtfpd31aqf94cccb0oj79aj0be9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJmeAzl3VTydYvE4nSrt5CGuTqh6RVXFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921932876541-3rqtjtfpd31aqf94cccb0oj79aj0be9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
