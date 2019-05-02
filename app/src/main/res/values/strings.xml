@@ -3,6 +3,17 @@
     <string name="action_settings">Configuracion</string>
     <string name="title_activity_maps">Shopping Mile Map</string>
 
+    <!-- LOG IN & SIGN UP-->
+    <string name="no_account_yet_create_one">No account yet? Create one</string>
+    <string name="login">Login</string>
+    <string name="logo">Logo</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+
     <!--  strings preferencias de usuario  -->
     <string name="pref_titulo_scren_nom_user">Nombre de Usuario</string>
     <string name="emailUser">Email</string>

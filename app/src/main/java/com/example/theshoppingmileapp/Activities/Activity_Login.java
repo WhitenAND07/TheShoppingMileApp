@@ -1,166 +1,147 @@
 package com.example.theshoppingmileapp.Activities;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+
 import com.example.theshoppingmileapp.R;
-import com.example.theshoppingmileapp.dominio.PlacesShopping;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import android.app.ProgressDialog;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
-import android.content.Context;
 
 public class Activity_Login extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-    public static final String PREFERENCE= "preference";
-    public static final String PREF_EMAIL = "email";
-    public static final String PREF_PASSWD = "passwd";
-    public static final String PREF_SKIP_LOGIN = "skip_login";
-    public static  final String EMAILU = Activity_Signup.PREF_Email;
-    public static  final String PASSWLU = Activity_Signup.PREF_PASSWD;
-    private SharedPreferences mSharedPreferences;
-    private ProgressDialog progressDialog;
-
     @BindView(R.id.input_email) EditText emailText;
     @BindView(R.id.input_password) EditText passwordText;
-    @BindView(R.id.buttonloginNew) Button buttonLoginNew;
-    @BindView(R.id.buttnSignupRegisterd) Button buttonSigUp;
-    RelativeLayout rellay1, rellay2;
+    @BindView(R.id.btn_login) Button loginButton;
+    @BindView(R.id.link_signup) TextView signupLink;
+    private String email;
+    private FirebaseAuth mAuth;
 
-    Handler handler = new Handler();
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            rellay1.setVisibility(View.VISIBLE);
-            rellay2.setVisibility(View.VISIBLE);
-        }
-    };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        rellay1 =  findViewById(R.id.rellay1);
-        rellay2 =  findViewById(R.id.rellay2);
         ButterKnife.bind(this);
-        handler.postDelayed(runnable, 2000); //2000 is the timeout for the splash
 
-        mSharedPreferences = getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE);
-        if(mSharedPreferences.contains(PREF_SKIP_LOGIN)){
-            startToMainActivity();
+        mAuth = FirebaseAuth.getInstance();
 
-        }else{
-            buttonLoginNew.setOnClickListener(new  View.OnClickListener(){
-                @Override
-                public void onClick(View v) {
-                    login();
-                }
-            });
-        }
-        buttonSigUp.setOnClickListener(new View.OnClickListener(){
+        loginButton.setOnClickListener(new  View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Activity_Signup.class));
-                finish();
+                login();
+            }
+        });
+
+        signupLink.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Signup activity
+                Intent intent = new Intent(getApplicationContext(), Activity_Signup.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
     }
 
     public void login() {
-
         Log.d(TAG, "Login");
+
         if (!validate()) {
             onLoginFailed();
             return;
         }
-        String emaliU = mSharedPreferences.getString(EMAILU, "userEmail");
-        String pasUser = mSharedPreferences.getString(PASSWLU, "userPass");
-        if(mSharedPreferences.contains(PREF_EMAIL)&& mSharedPreferences.contains(PREF_PASSWD)){
-            if(loginEmailPassValid(emaliU, pasUser)){
-                SharedPreferences.Editor mEditor = mSharedPreferences.edit();
-                mEditor.putString(PREF_SKIP_LOGIN, "skip");
-                mEditor.apply();
-                startToMainActivity();
-            }else{
-                Toast.makeText(getApplicationContext(), "Username or password invalid!", Toast.LENGTH_SHORT).show();
-                return;
-            }
-        }else{
-            Toast.makeText(getApplicationContext(),"Your user not exist.",Toast.LENGTH_SHORT).show();
-            buttonLoginNew.setEnabled(false);
-            return;
-        }
-        progressDialog = new ProgressDialog(this, R.style.AppTheme_Dark_Dialog);
+
+        loginButton.setEnabled(false);
+
+        final ProgressDialog progressDialog = new ProgressDialog(Activity_Login.this,
+                R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
+        email = emailText.getText().toString();
+        final String password = passwordText.getText().toString();
+
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
+                        mAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener(Activity_Login.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            // Sign in success, update UI with the signed-in user's information
+                                            Log.d(TAG, "signInWithEmail:success");
+                                            onLoginSuccess();
+                                        } else {
+                                            // If sign in fails, display a message to the user.
+                                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                            Toast.makeText(Activity_Login.this, "Authentication failed.",
+                                                    Toast.LENGTH_SHORT).show();
+                                            onLoginFailed();
+                                        }
+                                    }
+                                });
+                        progressDialog.dismiss();
                     }
-                }, 5000);
+                }, 3000);
     }
 
-    private void startToMainActivity(){
-        startActivity(new Intent(getApplicationContext(), MapsActivity.class));
-        finish();
+    @Override
+    public void onBackPressed() {
+        // Disable going back to the
+        moveTaskToBack(true);
     }
 
     public void onLoginSuccess() {
-        buttonLoginNew.setEnabled(true);
+        loginButton.setEnabled(true);
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
         finish();
     }
 
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-        buttonLoginNew.setEnabled(true);
+
+        loginButton.setEnabled(true);
     }
 
     public boolean validate() {
         boolean valid = true;
+
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailText.setError("Enter a valid email address");
+            emailText.setError("enter a valid email address");
             valid = false;
-        }else {
+        } else {
             emailText.setError(null);
         }
+
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
             passwordText.setError("between 4 and 10 alphanumeric characters");
             valid = false;
-        }else {
+        } else {
             passwordText.setError(null);
         }
         return valid;
-    }
-
-    private boolean loginEmailPassValid (String email, String pass) {
-        return emailText.getText().toString().equals(email) &&
-                passwordText.getText().toString().equals(pass);
-    }
-    @Override
-    public void onDestroy (){
-        super.onDestroy();
-
-        if(progressDialog != null)
-            if(progressDialog.isShowing())
-                progressDialog.dismiss();
-        progressDialog= null;
     }
 }
