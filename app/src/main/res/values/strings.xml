@@ -3,6 +3,9 @@
     <string name="action_settings">Configuracion</string>
     <string name="title_activity_maps">Shopping Mile Map</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <!-- LOG IN & SIGN UP-->
     <string name="no_account_yet_create_one">No account yet? Create one</string>
     <string name="login">Login</string>
@@ -83,8 +86,6 @@
     <string name="establish_perfumery">Perfumeria</string>
 
     <!-- Navigation Drawer -->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">The Shopping Mile</string>
     <string name="nav_header_subtitle">The Mile of Andorra</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -94,4 +95,77 @@
     <string name="settingsTitle">Configuracion</string>
 
 
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Main Activity Strings -->
+    <string name="establishment_restaurant">Restaurant</string>
+    <string name="establishment_bar">Bar</string>
+    <string name="establishment_cafe">Cafe</string>
+    <string name="establishment_all">All</string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="settings">Settings</string>
+
+    <!-- Menú -->
+    <string name="reserva">Reserva</string>
+    <string name="valoraciones">Valorations</string>
+    <string name="tools">Configuration</string>
+    <string name="session">Session</string>
+    <string name="logout">Log Out</string>
+
+    <!-- Realizar reserva -->
+    <string name="npersons">Number of people</string>
+    <string name="hour">Time</string>
+    <string name="confirm_npersons">Confirm time and number of people</string>
+    <string name="reserva_now">Book now</string>
+    <string name="menu">Menu</string>
+
+    <!-- Seleccionar menús -->
+    <string name="first">First dish</string>
+    <string name="second">Second dish</string>
+    <string name="desert">Desert</string>
+    <string name="drink">Drink</string>
+    <string name="coffe">Coffe</string>
+    <string name="accept">Accept</string>
+    <string name="accept_res">Make reservation</string>
+    <string name="resumen_pedido">Order summary</string>
+
+    <!-- Valoración -->
+    <string name="comment">Commentary</string>
+    <string name="rval">Rate it</string>
+    <string name="addVal">Add rate</string>
+    <string name="addComment">Add comments</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="faqs">FAQs</string>
+    <string name="realizar_valoracion">Rate it</string>
+    <string name="obtener_pase_restaurante">Obtain the restaurant pass</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="restaurant_logo">Restaurant logo</string>
+    <string name="todo">TODO</string>
+    <string name="address">Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="booking_id">Booking ID:</string>
+    <string name="time">Time:</string>
+    <string name="number_of_people">Number of people:</string>
+    <string name="bookDone">Book done! Wait restaurant confirmation please!</string>
+    <string name="restaurantPass">Restaurant pass</string>
+    <string name="chooseMenu">Choose your meal</string>
+    <string name="bookings">Booking Details</string>
+    <string name="rateDone">Thanks for rating the book!</string>
+    <string name="wifi_connected">Wi-Fi Connection</string>
+    <string name="network_connected">Mobile Network Connection</string>
+    <string name="lost_connection">Lost Location</string>
+
+    <!--FAQS Activity-->
+    <string name="question1">Que es The Shopping Mile App?</string>
+    <string name="question2">Pregunta 2</string>
+    <string name="question3">Pregunta 3</string>
+    <string name="question4">Pregunta 4</string>
+    <string name="response1">És una aplicació que ofereix un ampli catàleg de l’oferta turística i comercial. Aquesta nova plataforma, orientada a millorar l’experiència del visitant del país. Andorra Wifi garanteix la connectivitat a la principal artèria comercial del país formada per l’eix avinguda Meritxell-avinguda Carlemany.
+        \n La integració fa que la utilització de l’aplicació sigui ràpida i àgil. A més posiciona sobre el terreny i marca els itineraris per arribar als establiments hotelers i de restauració, als museus i a les instal·lacions culturals i d’oci.</string>
+    <string name="response2">XXXXXX</string>
+    <string name="response3">XXXXXX</string>
+    <string name="response4">XXXXXX</string>
 </resources>
