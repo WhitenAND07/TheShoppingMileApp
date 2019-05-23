@@ -47,7 +47,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/question1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#000000" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -58,7 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="@string/response1" />
+                        android:text="@string/response1"
+                        android:layout_marginStart="20dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -79,6 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/question2"
+                        android:textColor="#000000"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -90,7 +93,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="@string/response2" />
+                        android:text="@string/response2"
+                        android:layout_marginStart="20dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -111,6 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/question3"
+                        android:textColor="#000000"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -122,7 +127,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="@string/response3" />
+                        android:text="@string/response3"
+                        android:layout_marginStart="20dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -143,6 +149,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/question4"
+                        android:textColor="#000000"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
 
@@ -154,7 +161,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="@string/response4" />
+                        android:text="@string/response4"
+                        android:layout_marginStart="20dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
