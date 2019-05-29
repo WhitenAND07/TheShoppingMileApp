@@ -3,20 +3,6 @@
     <string name="action_settings">Configuracion</string>
     <string name="title_activity_maps">Shopping Mile Map</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <!-- LOG IN & SIGN UP-->
-    <string name="no_account_yet_create_one">No account yet? Create one</string>
-    <string name="login">Login</string>
-    <string name="logo">Logo</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="re_enter_password">Re-enter Password</string>
-    <string name="create_account">Create Account</string>
-    <string name="already_a_member_login">Already a member? Login</string>
-
     <!--  strings preferencias de usuario  -->
     <string name="pref_titulo_scren_nom_user">Nombre de Usuario</string>
     <string name="emailUser">Email</string>
@@ -38,134 +24,64 @@
     <string name="boardTitle">Preferencias</string>
     <string name="boardSummary">Preferencias sobre los establecimientos</string>
 
-    <!-- Main Activity -->
-    <string name="radius_meters">Distancia</string>
-    <string name="distance_0">100 m</string>
-    <string name="distance_1">500 m</string>
-    <string name="distance_2">1 Km</string>
-    <string name="distance_3">1,5 Km</string>
-    <string name="distance_4">2 Km</string>
-    <string name="distance_5">5 Km</string>
-    <string name="establish_type">Establecimientos</string>
-    <string name="establish_all">Todos</string>
-    <string name="establish_meal">Gastronomia</string>
-    <string name="meal_type">Tipo de comida</string>
-    <string name="meal_0">Todos</string>
-    <string name="meal_1">Italiana</string>
-    <string name="meal_2">Turca</string>
-    <string name="meal_3">Española</string>
-    <string name="meal_4">China</string>
-    <string name="meal_5">Japonesa</string>
-    <string name="meal_6">Tapeo</string>
-    <string name="meal_7">Bocatas</string>
-    <string name="meal_8">Mexicana</string>
+    <!-- activity_ login-->
+    <string name="Signup">Signup</string>
+    <string name="SignupNow">Signup Now</string>
+    <string name="LoginNow">Login Now</string>
+    <string name="estoyRegistrado">Ya estoy registrado</string>
+    <string name="Password">Password</string>
+    <string name="Email">Email</string>
+    <string name="Nombre">Nombre</string>
 
-    <string name="establish_electronic">Electronica</string>
-    <string name="establish_clothing">Ropa</string>
-    <string name="establish_mall">Centro Comercial</string>
-    <string name="establish_museum">Museo</string>
-    <string name="establish_beauty_Salon">Salon de Belleza</string>
-    <string name="establish_sports">Tienda de deporte</string>
-    <string name="establish_book">Libreria</string>
-    <string name="establish_bowling">Bolera</string>
-    <string name="establish_bus">Autocar</string>
-    <string name="establish_church">Iglesia</string>
-    <string name="establish_cityHall">Ayuntamiento</string>
-    <string name="establish_florist">Floristeria</string>
-    <string name="establish_hotel">Hotel</string>
-    <string name="establish_jewery">Joyeria</string>
-    <string name="establish_tobaco">Estanco de Tabaco</string>
-    <string name="establish_liquor">Licoreria</string>
-    <string name="establish_cinema">Cine</string>
-    <string name="establish_nightClub">Discoteca</string>
-    <string name="establish_theater">Teatro</string>
-    <string name="establish_park">Parque</string>
-    <string name="establish_parking">Parking</string>
-    <string name="establish_pharmacy">Farmacia</string>
-    <string name="establish_Shoes">Zapateria</string>
-    <string name="establish_perfumery">Perfumeria</string>
+    <string name="location_permission_title">Location Permission</string>
+    <string name="location_permission_message">Hi there! We can\'t get Near By Location without location permission, could you please grant it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No thanks</string>
 
-    <!-- Navigation Drawer -->
-    <string name="nav_header_title">The Shopping Mile</string>
-    <string name="nav_header_subtitle">The Mile of Andorra</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="establishTitle">Establecimientos</string>
-    <string name="salesTitle">Ofertas</string>
-    <string name="mapTitle">The Shopping Mile Map</string>
-    <string name="settingsTitle">Configuracion</string>
+    <string name="gps_permission_title">Turn On GPS</string>
+    <string name="gps_permission_message">Hi there! Please turn on GPS to detect current location.</string>
+    <string name="retry">Retry</string>
+    <string name="search_hint">Hotel, Bakery, Hair Care</string>
+    <string name="launcher_icon">Launcher Icon</string>
+    <string name="favourite_menu_item">Favourite</string>
+    <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
+    <string name="about">About</string>
 
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="version_text">Version 1.0</string>
+    <string name="developed_by_text">Developed By: Yesid Quiroga / Jordi Blanco</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu_search">Search Place</string>
+    <string name="share_button">Share Button</string>
+    <string name="place_icon">Place Icon</string>
+    <string name="no_connection_string">No Internet Connection</string>
+    <string name="place_list_icon">Place List Icon</string>
+    <string name="near_by_tag">Near By </string>
+    <string name="list_tag">List</string>
+    <string name="no_near_by_tag">No Near By</string>
+    <string name="found">Found</string>
+    <string name="no_near_by_place_found">No Near By Place Found</string>
+    <string name="open_now">Open Now</string>
+    <string name="closed">Closed</string>
+    <string name="about_string">ABOUT</string>
+    <string name="review_string">REVIEW</string>
+    <string name="no_review_found">No Review Found</string>
+    <string name="phone_icon">Phone Icon</string>
+    <string name="call">CALL</string>
+    <string name="website_icon">Website Icon</string>
+    <string name="website">WEBSITE</string>
+    <string name="favourite_icon">Favourite Icon</string>
+    <string name="favourite">FAVOURITE</string>
+    <string name="small_location_icon">Small Location Icon</string>
+    <string name="small_call_icon">Small Call Icon</string>
+    <string name="small_website_icon">Small Website Icon</string>
+    <string name="small_location_status_icon">Small Location Status Icon</string>
+    <string name="phone_number_not_registered_string">Phone Number not Registered</string>
+    <string name="website_not_registered_string">Website not Registered</string>
+    <string name="call_permission_title">Call Permission</string>
+    <string name="call_permission_message">Hi there! We can\'t call anyone without the call permission, could you please grant it?</string>
+    <string name="search_result_string">Search Result</string>
 
-    <!-- Main Activity Strings -->
-    <string name="establishment_restaurant">Restaurant</string>
-    <string name="establishment_bar">Bar</string>
-    <string name="establishment_cafe">Cafe</string>
-    <string name="establishment_all">All</string>
-    <string name="permission_rationale">Location permission is needed for core functionality</string>
-    <string name="settings">Settings</string>
-
-    <!-- Menú -->
-    <string name="reserva">Reserva</string>
-    <string name="valoraciones">Valorations</string>
-    <string name="tools">Configuration</string>
-    <string name="session">Session</string>
-    <string name="logout">Log Out</string>
-
-    <!-- Realizar reserva -->
-    <string name="npersons">Number of people</string>
-    <string name="hour">Time</string>
-    <string name="confirm_npersons">Confirm time and number of people</string>
-    <string name="reserva_now">Book now</string>
-    <string name="menu">Menu</string>
-
-    <!-- Seleccionar menús -->
-    <string name="first">First dish</string>
-    <string name="second">Second dish</string>
-    <string name="desert">Desert</string>
-    <string name="drink">Drink</string>
-    <string name="coffe">Coffe</string>
-    <string name="accept">Accept</string>
-    <string name="accept_res">Make reservation</string>
-    <string name="resumen_pedido">Order summary</string>
-
-    <!-- Valoración -->
-    <string name="comment">Commentary</string>
-    <string name="rval">Rate it</string>
-    <string name="addVal">Add rate</string>
-    <string name="addComment">Add comments</string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="faqs">FAQs</string>
-    <string name="realizar_valoracion">Rate it</string>
-    <string name="obtener_pase_restaurante">Obtain the restaurant pass</string>
-    <string name="profile_photo">Profile Photo</string>
-    <string name="restaurant_logo">Restaurant logo</string>
-    <string name="todo">TODO</string>
-    <string name="address">Address</string>
-    <string name="mobile_number">Mobile Number</string>
-    <string name="booking_id">Booking ID:</string>
-    <string name="time">Time:</string>
-    <string name="number_of_people">Number of people:</string>
-    <string name="bookDone">Book done! Wait restaurant confirmation please!</string>
-    <string name="restaurantPass">Restaurant pass</string>
-    <string name="chooseMenu">Choose your meal</string>
-    <string name="bookings">Booking Details</string>
-    <string name="rateDone">Thanks for rating the book!</string>
-    <string name="wifi_connected">Wi-Fi Connection</string>
-    <string name="network_connected">Mobile Network Connection</string>
-    <string name="lost_connection">Lost Location</string>
-
-    <!--FAQS Activity-->
-    <string name="question1">Que es The Shopping Mile App?</string>
-    <string name="question2">Pregunta 2</string>
-    <string name="question3">Pregunta 3</string>
-    <string name="question4">Pregunta 4</string>
-    <string name="response1">És una aplicació que ofereix un ampli catàleg de l’oferta turística i comercial. Aquesta nova plataforma, orientada a millorar l’experiència del visitant del país. Andorra Wifi garanteix la connectivitat a la principal artèria comercial del país formada per l’eix avinguda Meritxell-avinguda Carlemany.
-        \nLa integració fa que la utilització de l’aplicació sigui ràpida i àgil. A més posiciona sobre el terreny i marca els itineraris per arribar als establiments hotelers i de restauració, als museus i a les instal·lacions culturals i d’oci.</string>
-    <string name="response2">XXXXXX</string>
-    <string name="response3">XXXXXX</string>
-    <string name="response4">XXXXXX</string>
 </resources>
