@@ -18,6 +18,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -32,22 +40,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".activities.Activity_Login" />
         <activity android:name=".activities.Activity_Signup" />
         <activity android:name=".ui.HomeActivity" />
-
         <activity android:name=".ui.PlaceDetailActivity" />
         <activity android:name=".ui.PlaceListOnMapActivity" />
         <activity android:name=".ui.FavouritePlaceListActivity" />
         <activity android:name=".ui.PlaceListActivity" />
-
         <activity
             android:name=".ui.PlaceSearchResultActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -56,4 +62,5 @@
                 android:resource="@xml/searchable" />
         </activity>
     </application>
+
 </manifest>
